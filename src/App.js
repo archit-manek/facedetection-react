@@ -88,7 +88,8 @@ class App extends Component {
         console.log("hi", response);
         if (response) {
           fetch("https://quiet-ravine-72698.herokuapp.com/image", {
-            method: "put",
+            method: "PUT",
+            mode: "cors",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               id: this.state.user.id,
