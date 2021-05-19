@@ -23,6 +23,9 @@ class Register extends React.Component {
   };
 
   onSubmitSignIn = () => {
+    console.log(
+      `${this.state.email}, ${this.state.name}, ${this.state.password}`
+    );
     fetch("https://quiet-ravine-72698.herokuapp.com/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
